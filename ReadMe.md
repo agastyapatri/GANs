@@ -1,6 +1,9 @@
 # **Fun with Generative Adversarial Networks**
+_Implementing semi-simple GANs in Pytorch_
 
-## **A Simple Introduction to GANs**
+--------
+
+## **An Introduction to GANs**
 A GAN has two subnetworks: the $G$_enerator_ and the $D$_iscriminator_.
 
 * $G$ is supposed to approximate the distribution which produces $x$ as closely as possible
@@ -19,10 +22,16 @@ To train a GAN, two sources of data are needed:
 
 
 ## **This Repository**
-A simple place to begin could be to create a model that can produce a normal distribution. Although a regular MLP could do this just fine, a simple demonstration could be useful.
+_The purpose of this repository is to implement the model encountered in the paper and test out a few applications._
 
 
 
+GANs are a generative paradigm. The simplest demonstration I can think of is to produce a model that can approximate the Normal Distribution. Precisely, $G(z) \approx N(x; \mu,\sigma)$ . Can I create a network which can produce samples from a Normal Distribution with an aribtrary parameter set?
+
+
+The next step could be to produce a model that can generate handwritten digits akin to the MNIST database. 
+
+**_More to be added._**
 
 ## **References**
 * I. Goodfellow et al., “GAN（Generative Adversarial Nets）,” Journal of Japan Society for Fuzzy Theory and Intelligent Informatics, vol. 29, no. 5, p. 177, Dec. 2014, doi: 10.3156/jsoft.29.5_177_2.
