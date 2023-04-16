@@ -20,18 +20,19 @@ To train a GAN, two sources of data are needed:
 * $x$: Data belonging to a distribution to be approximated by $G$, and discriminated by $D$.
 * $z$: Noisy data fed into $G$ such that $G(z) \approx x$ after training.
 
+Both the generator and discriminator are neural networks. The generator output is connected directly to hte discriminator input. Through backpropagation, the discriminator's classficiation procides a signal that the generator uses to update its weights. 
+
+
 
 ## **This Repository**
 _The purpose of this repository is to implement the model encountered in the paper and test out a few applications._
 
-
-
-GANs are a generative paradigm. The simplest demonstration I can think of is to produce a model that can approximate the Normal Distribution. Precisely, $G(z) \approx N(x; \mu,\sigma)$ . Can I create a network which can produce samples from a Normal Distribution with an aribtrary parameter set?
-
-
-The next step could be to produce a model that can generate handwritten digits akin to the MNIST database. 
-
 **_More to be added._**
+
+## **Git Branch Explanations and Hierarchy**
+`main`: $G$ generates samples from the normal distribution with a user defined $\mu, \sigma$. While a GAN for this problem is a wild overkill of a solution, this is being done merely for a proof of concept. 
+
+Other `git` branches will follow, each with different data generation schemes, architectures, results, etc. 
 
 ## **References**
 * I. Goodfellow et al., “GAN（Generative Adversarial Nets）,” Journal of Japan Society for Fuzzy Theory and Intelligent Informatics, vol. 29, no. 5, p. 177, Dec. 2014, doi: 10.3156/jsoft.29.5_177_2.
