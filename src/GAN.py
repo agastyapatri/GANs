@@ -3,7 +3,8 @@ import scipy as sp
 import torch
 import torch.nn as nn
 torch.manual_seed(0)
-dtype = torch.float32 
+dtype = torch.float32
+
 
 
 class Discriminator(nn.Module):

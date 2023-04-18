@@ -22,21 +22,28 @@ To train a GAN, two sources of data are needed:
 
 Both the generator and discriminator are neural networks. The generator output is connected directly to hte discriminator input. Through backpropagation, the discriminator's classficiation procides a signal that the generator uses to update its weights. 
 
+_**Questions that need answering:**_
 
+1. What is the loss function here?
+
+2. How does Backprop happen here?
 
 ## **This Repository**
-_The purpose of this repository is to implement the model encountered in the paper and test out a few applications._
+This repository focuses on a few problems, which are picked to help me learn about how a GAN works. 
 
-**_More to be added._**
+1. _Creating a network which can approximate the Normal Distribution_
+    
+    Input-Target tuples for both of the networks are as follows:
+    * $G_{input} = (\{z\}, \{x\})$
+    * $D_{input} = (\{G(z)\}, \{x\})$
+    
+    Above, $x \in N(x; \mu, \sigma)$, $z \in p_{z}$, where $p_{z}$ is some distribution other than the one that needs to be approximated. 
 
-## **Git Branch Explanations and Hierarchy**
-`main`: $G$ generates samples from the normal distribution with a user defined $\mu, \sigma$. While a GAN for this problem is a wild overkill of a solution, this is being done merely for a proof of concept. 
+2. Creating a GAN which can recreate the digits from the MNIST Dataset, or more precisely, generate handwritten digits in the same style as the MNIST dataset.
 
-Other `git` branches will follow, each with different data generation schemes, architectures, results, etc. 
 
 ## **References**
 * I. Goodfellow et al., “GAN（Generative Adversarial Nets）,” Journal of Japan Society for Fuzzy Theory and Intelligent Informatics, vol. 29, no. 5, p. 177, Dec. 2014, doi: 10.3156/jsoft.29.5_177_2.
 
-* 
 
 
