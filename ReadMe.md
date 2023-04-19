@@ -27,6 +27,15 @@ _**Questions that need answering:**_
 1. What is the loss function here?
 
 2. How does Backprop happen here?
+        
+        The steps to training a GAN are as follows:
+            1. Forward Pass: G takes random noise and produces an output sample, whereas D takes the output sample and the real sample as an input. It outputs the probability that the sample is real.
+
+            2. Loss Calculation: D calculates the difference between its predicted probability and the true label, and this difference is used as the loss for the D. G calculates the difference between the predicted probability of the  D and the true label.
+
+            3. Backprop: The gradients of the loss functions with respect to the pararmeters of both networks are calculuated according to the chain rule of calculus. The gradients are then used to update the parameters of both the G and D networks using an optimization algorithm like SGD.
+
+            4. Repeat until under an accuracy threshold.     
 
 ## **This Repository**
 This repository focuses on a few problems, which are picked to help me learn about how a GAN works. 
